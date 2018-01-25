@@ -8,6 +8,12 @@ This is an official, open-source and community-driven boilerplate for Phalcon + 
 It's an attempt of standardizing and making it easier to bootstrap ISOPHP community website ready for development and
 production environments.
 
+## Quick Start
+```
+git clone https://github.com/isophp/isophp_dev_env_docker.git
+cd isophp_dev_env_docker && sh auto_install.sh
+```
+
 ## Documentation
 
 The current version can be seen at [docs.phalconphp.com][:compose:].
