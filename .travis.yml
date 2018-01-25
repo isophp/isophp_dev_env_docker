@@ -1,0 +1,56 @@
+language: ruby
+
+rvm:
+  - 2.3.1
+
+sudo: required
+
+services:
+  - docker
+
+env:
+  - DOCKER_COMPOSE_VERSION="1.6.2"
+  - DOCKER_COMPOSE_VERSION="1.7.0"
+  - DOCKER_COMPOSE_VERSION="1.8.0"
+  - DOCKER_COMPOSE_VERSION="1.9.0"
+  - DOCKER_COMPOSE_VERSION="1.10.0"
+  - DOCKER_COMPOSE_VERSION="1.11.0"
+  - DOCKER_COMPOSE_VERSION="1.12.0"
+
+git:
+  depth: 1
+
+cache:
+  - apt
+
+before_install:
+  - gem update bundler
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -sSL https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+  - stty cols 160
+  - cp variables.env.example variables.env
+
+install:
+  - make pull
+  - make help
+  - bundle install --path vendor/bundle
+
+before_script:
+  - make build
+  - make check
+  - sleep 1
+
+script:
+  - bundle exec rspec spec
+
+after_failure:
+  - bash bin/logs.sh
+
+notifications:
+  email:
+    recipients:
+      - liuhongda1@360.cn
+    on_success: change
+    on_failure: always
