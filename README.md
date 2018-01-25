@@ -25,7 +25,7 @@ The current version can be seen at [docs.phalconphp.com][:compose:].
 ## License
 
 ISOPHP DEV ENV DOCKER is open source software licensed under the MIT.<br>
-See the [LICENSE.txt][:license:] file for more.<br>© 2018 ISOPHP Team
+See the [LICENSE][:license:] file for more.<br>© 2018 ISOPHP Team
 
 [:release:]:   https://github.com/isophp/isophp_dev_env_docker/releases
 [:docker:]:    https://www.docker.com
