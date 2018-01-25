@@ -20,4 +20,4 @@ COPY ./application /project/application
 
 # composer install
 WORKDIR /project 
-RUN cd application && composer install 
+RUN cd /project/application && composer install 
