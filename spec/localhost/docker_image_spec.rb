@@ -27,7 +27,6 @@ describe "Dockerfile" do
             expect(@image.json['ContainerConfig']['ExposedPorts']).to include("#{HTTP_PORT}/tcp")
             expect(@image.json['ContainerConfig']['ExposedPorts']).to include("#{SSL_PORT}/tcp")
             expect(@image.json['ContainerConfig']['ExposedPorts']).to include("#{CGI_PORT}/tcp")
-            expect(@image.json['ContainerConfig']['ExposedPorts']).to include("#{NODE_PORT}/tcp")
         end
     end
 
