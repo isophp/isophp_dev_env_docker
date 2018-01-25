@@ -40,7 +40,6 @@ install:
 
 before_script:
   - make build
-  - make up
   - make check
   - sleep 1
 
