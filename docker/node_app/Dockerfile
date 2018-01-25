@@ -7,5 +7,6 @@ COPY ./application /project/application
 WORKDIR /project/application/ManagerPlatform
 RUN cd /project/application/ManagerPlatform \
     && rm -rf node_modules \
-    && npm install \
-    && npm start
+    && npm install
+
+CMD ['npm', 'start']
