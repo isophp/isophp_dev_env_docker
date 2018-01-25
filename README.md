@@ -23,7 +23,7 @@ Then check http://devel.isophp.cn for index page and check http://devel.isophp.c
 - Install Docker and Docker-Compose in your machine
 ```
 git clone https://github.com/isophp/isophp_dev_env_docker.git
-cd isophp_dev_env_docker 
+cd isophp_dev_env_docker && ./run_before_up.sh
 sudo docker-compose up app && sudo docker-compose up node_app
 ```
 
