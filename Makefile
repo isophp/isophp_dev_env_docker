@@ -39,7 +39,9 @@ help-default help: .title
 	@echo ""
 
 build: check
-	docker-compose build --no-cache
+	docker-compose build app
+	docker-compose build node_app
+	docker-compose build
 
 pull:
 	docker pull mongo:3.2
@@ -55,6 +57,8 @@ pull:
 	docker pull phalconphp/php-apache:ubuntu-16.04
 
 up: check
+	docker-compose up app -d
+	docker-compose up node_app -d
 	docker-compose up -d
 
 start: check

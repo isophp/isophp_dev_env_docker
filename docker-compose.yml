@@ -106,8 +106,8 @@ services:
     volumes:
       - .:/project
       - /project/application/ManagerPlatform/node_modules
-    # depends_on:
-      # - app
+    depends_on:
+      - app
 
   app:
     build: ./docker/app
