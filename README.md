@@ -17,6 +17,7 @@ production environments.
 git clone https://github.com/isophp/isophp_dev_env_docker.git
 cd isophp_dev_env_docker && sh auto_install.sh
 ```
+Then check devel.isophp.cn for index page and check devel.isophp.cn:8000 for admin page.
 
 ## Manual Guide
 - Install Docker and Docker-Compose in your machine
