@@ -99,6 +99,8 @@ services:
     build: ./docker/node_app
     restart: always
     working_dir: /project/application/ManagerPlatform
+    expose:
+      - "8000"
     ports:
       - "8000:8000"
     # volumes_from:
