@@ -2,7 +2,7 @@ ROOT_DIR       := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 VARIABLES_FILE  = $(ROOT_DIR)/variables.env
 PHALCON_VERSION = $(shell docker run -it --rm phalconphp/php-apache:ubuntu-16.04 sh -c "/usr/bin/php -r 'echo Phalcon\Version::get();'")
 SHELL          := $(shell which bash)
-VERSION         = 2.3.0
+VERSION         = 0.0.1
 ARGS            = $(filter-out $@,$(MAKECMDGOALS))
 
 .SILENT: ;               # no need for @
@@ -43,6 +43,7 @@ build: check
 
 pull:
 	docker pull mongo:3.2
+	docker pull node:9.4
 	docker pull postgres:9.5
 	docker pull mysql:5.7
 	docker pull memcached:1.4

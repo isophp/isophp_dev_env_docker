@@ -31,6 +31,7 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
   - stty cols 160
   - cp variables.env.example variables.env
+  - git clone https://github.com/isophp/isophp.git application
 
 install:
   - make pull
