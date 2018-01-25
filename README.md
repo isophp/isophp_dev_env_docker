@@ -22,7 +22,8 @@ cd isophp_dev_env_docker && sh auto_install.sh
 - Install Docker and Docker-Compose in your machine
 ```
 git clone https://github.com/isophp/isophp_dev_env_docker.git
-cd isophp_dev_env_docker && sudo docker-compose up
+cd isophp_dev_env_docker 
+sudo docker-compose up app && sudo docker-compose up node_app
 ```
 
 ## Documentation
