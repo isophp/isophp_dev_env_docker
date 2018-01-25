@@ -1,15 +1,15 @@
 {
-    "name": "phalcon/compose",
+    "name": "isophp_dev_env_docker",
     "description": "Open-source and community-driven boilerplate for Phalcon projects by using Docker and Docker Compose",
     "keywords": ["phalcon", "docker", "compose", "boilerplate", "skeleton"],
     "license": "MIT",
     "type": "project",
-    "homepage": "https://phalcon-compose.readme.io/",
+    "homepage": "https://isophp.org/",
     "authors": [
         {
-            "name": "Phalcon Team",
-            "email": "team@phalconphp.com",
-            "homepage": "https://phalconphp.com/en/team"
+            "name": "ISOPHP Team",
+            "email": "liuhongda1@360.cn",
+            "homepage": "https://isophp.org"
         },
         {
             "name": "Contributors",
