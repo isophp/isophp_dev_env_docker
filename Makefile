@@ -57,9 +57,7 @@ pull:
 	docker pull phalconphp/php-apache:ubuntu-16.04
 
 up: check
-	docker-compose up app -d
-	docker-compose up node_app -d
-	docker-compose up -d
+	docker-compose up
 
 start: check
 	docker-compose start
