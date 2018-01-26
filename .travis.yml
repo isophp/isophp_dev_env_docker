@@ -42,7 +42,7 @@ before_script:
 
 script:
   - bundle exec rspec spec
-
+  # - bash test/test_mysql.sh
 after_failure:
   - bash bin/logs.sh
 
