@@ -9,7 +9,7 @@ describe "Dockerfile" do
         set :docker_image, @image.id
     end
 
-    describe command("`mysql --user="$MYSQL_USER" --password="$MYSQL_PASSWORD" --database="$MYSQL_DATABASE" \
+    describe command("`mysql --user="isophp" --password="secret" --database="isophpdb" \
         --execute="SELECT COUNT(*) FROM app_article_content;"`") do
             its(:stdout) { should eq "1" }
     end
