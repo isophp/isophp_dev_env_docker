@@ -14,7 +14,7 @@ describe "Dockerfile" do
     end
 
     def if_table_exist
-        command(`mysql --user="root" --password="secret" --database="isophpdb" \
+        command(`mysql --user="isophp" --password="secret" --database="isophpdb" \
         --execute="SELECT COUNT(*) FROM app_article_content;"`).stdout
     end
 end
