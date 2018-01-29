@@ -41,6 +41,7 @@ help-default help: .title
 build: check
 	docker-compose build app
 	docker-compose build node_app
+	docker-compose build mysql
 	docker-compose build
 
 pull:
