@@ -1,4 +1,3 @@
-CREATE DATABASE isophpdb;
 use isophpdb;
 create table if not exists `app_article_content`(
   `id` int not null auto_increment comment '自增id',
