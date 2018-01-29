@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe "Dockerfile" do
     before(:all) do
-        @node_image = Docker::Image.build_from_dir(File.dirname(File.dirname(File.dirname(__FILE__))) + '/docker/mysql')
+        @mysql_image = Docker::Image.build_from_dir(File.dirname(File.dirname(File.dirname(__FILE__))) + '/docker/mysql')
 
         set :os, family: :debian
         set :backend, :docker
-        set :docker_image, @image.id
+        set :mysql_image, @image.id
     end
 
     describe command(`mysql --user="isophp" --password="secret" --database="isophpdb" \

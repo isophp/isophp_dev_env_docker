@@ -8,7 +8,7 @@ describe "Dockerfile" do
 
         set :os, family: :debian
         set :backend, :docker
-        set :docker_image, @image.id
+        set :node_image, @image.id
     end
 
     describe 'Dockerfile#config' do
