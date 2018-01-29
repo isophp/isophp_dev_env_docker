@@ -36,7 +36,7 @@ install:
   - bundle install --path vendor/bundle
 
 before_script:
-  - make build
+  # - make build
   - make check
   - make up
   - sleep 1
