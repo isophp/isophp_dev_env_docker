@@ -24,6 +24,7 @@ services:
       - variables.env
 
   mysql:
+    build: ./docker/mysql
     restart: always
     image: mysql:5.7
     expose:
