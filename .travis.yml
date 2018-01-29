@@ -39,7 +39,7 @@ before_script:
   # - make build
   - sudo service mysql stop
   - sudo service postgresql stop
-  - sudo service memcached restart
+  - sudo /etc/init.d/memcached restart
   - make check
   - make up
   - sleep 1
