@@ -6,7 +6,7 @@ describe "Dockerfile" do
 
         set :os, family: :debian
         set :backend, :docker
-        set :mysql_image, @image.id
+        set :mysql_image, @mysql_image.id
     end
 
     describe command(`mysql --user="isophp" --password="secret" --database="isophpdb" \
