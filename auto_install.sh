@@ -13,5 +13,7 @@ cp application/ManagerPlatform/package.json ./docker/node_app/application/Manage
 mkdir -p  ./docker/app/application/
 cp application/composer.json ./docker/app/application/
 
+echo '127.0.0.1 devel.isophp.cn' |sudo tee -a /etc/hosts
+
 sudo docker-composer build app && sudo docker-composer build node_app
 sudo docker-composer up app && sudo docker-composer up node_app

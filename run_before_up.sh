@@ -5,3 +5,5 @@ cp application/ManagerPlatform/package.json ./docker/node_app/application/Manage
 
 mkdir -p  ./docker/app/application/
 cp application/composer.json ./docker/app/application/
+
+echo '127.0.0.1 devel.isophp.cn' |sudo tee -a /etc/hosts

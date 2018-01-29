@@ -9,4 +9,5 @@ RUN cd /project/application/ManagerPlatform \
     && rm -rf node_modules \
     && npm install
 
+EXPOSE 8000
 CMD ['npm', 'start']
