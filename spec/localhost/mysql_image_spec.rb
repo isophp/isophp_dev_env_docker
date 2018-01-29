@@ -9,8 +9,12 @@ describe "Dockerfile" do
         set :mysql_image, @mysql_image.id
     end
 
-    describe command(`mysql --user="isophp" --password="secret" --database="isophpdb" \
-        --execute="SELECT COUNT(*) FROM app_article_content;"`) do
-            its(:stdout) { should eq "1" }
+    it "Make sure the table had been created" do
+        expect(if_table_exist).to include("COUNT")
+    end
+
+    def if_table_exist
+        command(`mysql --user="isophp" --password="secret" --database="isophpdb" \
+        --execute="SELECT COUNT(*) FROM app_article_content;"`).stdout
     end
 end

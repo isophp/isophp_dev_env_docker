@@ -3,12 +3,10 @@ require 'spec_helper'
 HTTP_PORT = 80
 SSL_PORT  = 443
 CGI_PORT  = 9000
-NODE_PORT = 8000
 
 describe "Dockerfile" do
     before(:all) do
         @image = Docker::Image.build_from_dir(File.dirname(File.dirname(File.dirname(__FILE__))) + '/docker/app')
-        @node_image = Docker::Image.build_from_dir(File.dirname(File.dirname(File.dirname(__FILE__))) + '/docker/node_app')
 
         set :os, family: :debian
         set :backend, :docker
@@ -28,7 +26,6 @@ describe "Dockerfile" do
             expect(@image.json['ContainerConfig']['ExposedPorts']).to include("#{HTTP_PORT}/tcp")
             expect(@image.json['ContainerConfig']['ExposedPorts']).to include("#{SSL_PORT}/tcp")
             expect(@image.json['ContainerConfig']['ExposedPorts']).to include("#{CGI_PORT}/tcp")
-            expect(@node_image.json['ContainerConfig']['ExposedPorts']).to include("#{NODE_PORT}/tcp")
         end
     end
 
