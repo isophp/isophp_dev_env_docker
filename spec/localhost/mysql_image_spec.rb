@@ -9,7 +9,7 @@ describe "Dockerfile" do
         set :mysql_image, @mysql_image.id
     end
 
-    it "Make sure the table had been created" do
+    it "Make sure the table had been created", :retry => 10, :retry_wait => 10 do
         expect(if_table_exist).to include("COUNT")
     end
 

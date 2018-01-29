@@ -1,4 +1,3 @@
-use isophpdb;
 create table if not exists `app_article_content`(
   `id` int not null auto_increment comment '自增id',
   `title` varchar(256) not null comment '文章标题',
@@ -17,4 +16,3 @@ create table if not exists `app_article_content`(
   index category_status(`category_id`,`status`),
   index author_status(`author`,`status`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
-grant all privileges on isophpdb.* to isophp@localhost identified by 'secret';
